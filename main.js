@@ -114,7 +114,7 @@
 //    if(reqObj[i].ccy == 'BTC') {
 //        arrExch[i].innerHTML = '<strike>' + Math.round(Number(document.getElementById('salary').textContent) / reqObj[i].sale) + " " + reqObj[i].ccy + '/' +            reqObj[i].base_ccy + '</strike>';
 //    }
-}
+//}
 /////////////////////////////////////////
 //function sum(a) {
 //    return function(b) {
@@ -169,6 +169,7 @@
 //        return "WTF";
 //    }
 //}
+//////////////////////////////////////////
 //console.log(fi(8));
     /*loop Fibonacci*/
 //function fi(n) {
@@ -202,11 +203,132 @@
 //
 //console.log(filter(arr));
 /////////////////////////////////////////////
-
-
-
-
-
+//var backetModule = (function() {
+//    var sum = 0, goods = [];
+//    return {
+//        addProduct: function(good) {
+//            goods.push(good);
+//        },
+//        getPriceProduct: function() {
+//            var i = 0, size = goods.length;
+//            for(i = 0; i < size; i += 1) {
+//                console.log(goods[i].name, goods[i].price);
+//            }
+//        }
+//    }
+//}());
+//var bread = {
+//    name: 'bread',
+//    price: 300
+//};
+//backetModule.addProduct(bread);
+//backetModule.getPriceProduct();
+/////////////////////////////////////
+//var Gadget = function() { };
+//Gadget.isShiny = function() {
+//    return 'your bet';
+//};
+//Gadget.prototype.isShiny = function () {
+//    return Gadget.isShiny.call(this);
+//}
+//var gadget = new Gadget();
+//console.log(gadget.isShiny()); // ERROR!!!
+//console.log(Gadget.isShiny()); // not ERROR!!!
+///////////////////////////////////////////
+//let sizeBurg = [{size: 'big', price: 40, kallories: 40},{size: 'small', price: 20, kallories: 20}];
+//let insideBurg = [{inside: 'cheese', price: 20, kallories: 10},{inside: 'tomato', price: 5, kallories: 5}];
+//let souseBurg = [{souse: 'ketchup', price: 5, kallories: 5},{souse: 'grill', price: 5, kallories: 8}];
+//class burger {
+//    constructor(size, inside, souse) {
+//        this.size = size;
+//        this.inside = inside;
+//        this.souse = souse;
+//    }
+//    calcSum() {
+//        let resPrice = 0;
+//        let resKall = 0;
+//        sizeBurg.forEach(function(item) {
+//           if(item.size === this.size) {
+//               resKall += item.kallories;
+//               resPrice += item.price;
+//               insideBurg.forEach(function(item) {
+//                   if(item.inside === this.inside) {
+//                       resKall += item.kallories;
+//                       resPrice += item.price;
+//                       souseBurg.forEach(function(item) {
+//                           resKall += item.kallories;
+//                           resPrice += item.price;
+//                           return resPrice;
+//                       })
+//                   }
+//               })
+//           } 
+//        });
+//    }
+//}
+//let b = new burger('big', 'cheese', 'ketchup');
+//b.calcSum();   --->>>> NOT FINISHED
+/////////////////////////////////////////////
+//function Universe() {
+//    if(typeof Universe.instance === 'object') {
+//        return Universe.instance;
+//    }
+//    this.a = 9;
+//    this.b = 10;
+//    Universe.instance = this;
+//    return this;
+//}
+//var uni1 = new Universe();
+//var uni2 = new Universe();
+//console.log(uni1===uni2);
+/////////////////////////////////
+//function Universe() {
+//    var instance = this;
+//    this.a = 9;
+//    this.b = 10;
+//    Universe = function() {
+//        return instance;
+//    }                                     -------------------> SINGLETON
+//}
+//var uni1 = new Universe();
+//var uni2 = new Universe();
+//console.log(uni1===uni2);
+/////////////////////////////
+//function CarMake(a, b) {
+//    this.a = a;
+//    this.b = b;                 -------------------> FACTORY
+//}
+//var honda = new CarMake(2, 3);
+//var toyota = new CarMake(3, 4);
+/////////////////////////
+//var speaker = {
+//    name: 'Bob'
+//};
+//var mover = {
+//    speak: function() {
+//        return this.name + ' is speaking';
+//    },
+//    walk: function() {
+//        return this.name + ' is walking';
+//    }
+//};
+//var jumper = {
+//    jump: function() {
+//        return this.name + ' is jumping';         ------------------->  MIXIN
+//    }
+//}
+//function extend(target) {
+//    var i, size  = arguments.length;
+//    var source = arguments[i], prop;
+//    for(i = 1; i < size; i++) {
+//        for (prop in source) {
+//            if(source.hasOwnProperty(prop)) {
+//                target[prop] = source.prop;
+//            }
+//        }
+//    }
+//}
+//////////////////////////////////////////
 
 
 
